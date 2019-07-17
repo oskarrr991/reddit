@@ -4,7 +4,7 @@
         <mat-form-field fxflex id="firstField">
             <mat-label>Select Reddist</mat-label>
             <mat-select [(ngModel)]="topic" (ngModelChange)="setTopic($event)">
-                <mat-option #f *ngFor="let url of urls" [value]="url">{{url}}</mat-option>
+                <mat-option *ngFor="let url of urls" [value]="url">{{url.slice(3, -1)}}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field fxflex="15" id="secondField">
