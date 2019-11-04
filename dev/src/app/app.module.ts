@@ -1,41 +1,44 @@
+import { ThemesService } from './services/themes.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainComponent } from './views/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainComponent } from './components/main/main.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-
-import {
-  MatCardModule,
-  MatFormFieldModule,
-  MatSelectModule,
-  MatButtonModule,
-  MatIconModule
-} from '@angular/material';
+import {MatSelectModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatProgressSpinnerModule,} from '@angular/material';
+import { SearchDirective } from './directives/search.directive';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    SearchDirective,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
-    MatCardModule,
-    MatFormFieldModule,
     MatSelectModule,
+    MatCardModule,
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    MatIconModule
+    FlexLayoutModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [ThemesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
