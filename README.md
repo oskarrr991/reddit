@@ -1,3 +1,9 @@
+# Info
+
+Project was made with Angular CLI
+Simple web app that gets all photos form reddit categories as you can see on the screenshots
+Reddit API -> https://www.reddit.com/.json?&show=all&limit=100
+
 # Screenshots
 
 ![image](https://github.com/oskarrr991/reddit/blob/master/dev/screensh/Screenshot_1.png)
